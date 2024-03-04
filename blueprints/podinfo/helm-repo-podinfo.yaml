@@ -4,5 +4,6 @@ metadata:
   name: helm-repo-podinfo
   namespace: podinfo
 spec:
+  interval: 5m0s
   timeout: 1m0s
   url: https://stefanprodan.github.io/podinfo

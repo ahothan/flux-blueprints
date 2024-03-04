@@ -13,6 +13,7 @@ spec:
         kind: HelmRepository
         name: helm-repo-podinfo
         namespace: podinfo
+  interval: 5m
   values:
     replicaCount: ${podinfoReplicas:=1}
     ui:

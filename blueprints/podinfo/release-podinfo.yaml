@@ -18,12 +18,12 @@ spec:
     replicaCount: ${podinfoReplicas:=1}
     ui:
       color: ${podinfoColor:="#34577c"}       # cue =~ "^#[0-9a-fA-F]{6}$"
-      message: ${podinfoMessage:="Hello from podinfo"}
+      message: ${podinfoMessage}
     resources:
       requests:
         cpu: ${podinfoCpuRequest:=1m}         # cue #CpuResource
         memory: ${podinfoMemoryRequest:=8Mi}  # cue #MemoryResource
-    cache: ${podinfoRedisURL}                 # cue #URL
+    cache: ${podinfoRedisURL:=""}             # cue #URL | ""
     redis:
       enabled: ${podinfoRedisEnabled:=false}
   

@@ -18,7 +18,7 @@ spec:
     replicaCount: ${podinfoReplicas:=1}
     ui:
       color: ${podinfoColor:="#34577c"}       # cue =~ "^#[0-9a-fA-F]{6}$"
-      message: ${podinfoMessage}
+      message: "${dcName} ${podinfoMessage}""
     resources:
       requests:
         cpu: ${podinfoCpuRequest:=1m}         # cue #CpuResource
@@ -26,4 +26,5 @@ spec:
     cache: ${podinfoRedisURL:=""}             # cue #URL | ""
     redis:
       enabled: ${podinfoRedisEnabled:=false}
+  
   
